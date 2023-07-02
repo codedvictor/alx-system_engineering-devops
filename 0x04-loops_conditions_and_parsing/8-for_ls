@@ -4,5 +4,5 @@
 LST="$(ls)"
 for l in $LST;
 do
-	echo "$l"
+	echo "$l" | cut -f 2- -d '-'
 done
