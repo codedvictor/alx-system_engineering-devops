@@ -9,7 +9,7 @@ do
 	m=1
 	while [ "$m" -lt 60 ];
 	do
-		echo $m
+		echo "$m"
 		(( m++ ))
 	done
 	(( h++ ))
