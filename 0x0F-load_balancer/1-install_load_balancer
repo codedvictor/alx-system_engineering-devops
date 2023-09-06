@@ -19,4 +19,7 @@ backend web-backend
 echo "$server_conf" | sudo tee -a /etc/haproxy/haproxy.cfg
 echo "ENABLED=1" | sudo tee -a /etc/default/haproxy
 
-service haproxy restart
+sudo service haproxy restart
+
+msg="HAProxy configuration has been updated. Servers configured: $(grep -oP 'server \K\w+-\d+' /etc/haproxy/haproxy.cfg)"
+echo "$msg"
