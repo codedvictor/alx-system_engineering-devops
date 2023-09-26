@@ -23,7 +23,7 @@ if __name__ == '__main__':
             fil = {}
             fil['username'] = user_name
             fil['task'] = task.get('title')
-            fil['completed']: task.get('completed')
+            fil['completed'] = task.get('completed')
             list_tasks.append(fil)
 
         users_fil[str(user_id)] = list_tasks
@@ -31,5 +31,3 @@ if __name__ == '__main__':
     user_file = 'todo_all_employees.json'
     with open(user_file, mode='w') as file_json:
         json.dump(users_fil, file_json)
-
-    print('Json file "{}" has been successfully exported.'.format(user_file))
